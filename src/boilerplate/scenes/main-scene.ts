@@ -15,6 +15,6 @@ export class MainScene extends Phaser.Scene {
   }
 
   create(): void {
-    let button: NumberButton = new NumberButton(this, 1);
+    let button: NumberButton = new NumberButton(this, 9, 375, 275, 50, 50);
   }
 }

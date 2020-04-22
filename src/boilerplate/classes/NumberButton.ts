@@ -2,6 +2,7 @@ import Button from "./Button";
 
 export default class NumberButton extends Button {
   public value: number;
+
   constructor(
     scene: Phaser.Scene,
     initialValue: number = 0,
@@ -21,5 +22,9 @@ export default class NumberButton extends Button {
     if (this.value > 9) this.value = 0;
 
     this.setText(this.value.toString());
+  }
+
+  randomize(): void {
+    this.value = Math.floor(Math.random() * 10);
   }
 }

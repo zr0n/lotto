@@ -4,6 +4,7 @@ export default class Button {
   private height: number;
   private x: number;
   private y: number;
+  private background: Phaser.GameObjects.Graphics;
   private text: Phaser.GameObjects.Text;
   private onClickCallback: () => void;
 
@@ -24,9 +25,26 @@ export default class Button {
   }
 
   create(): void {
-    this.text = this.scene.add.text(this.x, this.y, "0");
+    //background
+    this.background = this.scene.add.graphics();
+    this.background.fillStyle(0xff00ff, 1.0);
+    this.background.fillRect(this.x, this.y, this.width, this.height);
+    this.background.strokeRect(this.x, this.y, this.width, this.height);
+
+    var style = {
+      font: "bold 32px Arial",
+      fill: "#fff",
+      boundsAlignH: "center",
+      boundsAlignV: "middle",
+    };
+    this.text = this.scene.add.text(
+      this.x + this.width / 3,
+      this.y + this.height / 5,
+      "0",
+      style
+    );
     this.text.setInteractive(
-      new Phaser.Geom.Rectangle(this.x, this.y, this.width, this.height),
+      new Phaser.Geom.Rectangle(-13, -13, this.width, this.height),
       Phaser.Geom.Rectangle.Contains
     );
 
