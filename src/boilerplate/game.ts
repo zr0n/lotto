@@ -1,9 +1,3 @@
-/**
- * @author       Digitsensitive <digit.sensitivee@gmail.com>
- * @copyright    2018 - 2019 digitsensitive
- * @license      {@link https://github.com/digitsensitive/phaser3-typescript/blob/master/LICENSE.md | MIT License}
- */
-
 import "phaser";
 import { MainScene } from "./scenes/main-scene";
 
@@ -13,7 +7,7 @@ const config: Phaser.Types.Core.GameConfig = {
   height: 600,
   type: Phaser.AUTO,
   parent: "game",
-  scene: MainScene
+  scene: MainScene,
 };
 
 export class Game extends Phaser.Game {
