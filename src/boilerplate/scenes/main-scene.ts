@@ -1,4 +1,4 @@
-import Button from "../classes/Button";
+import NumberButton from "../classes/NumberButton";
 
 export class MainScene extends Phaser.Scene {
   private phaserSprite: Phaser.GameObjects.Sprite;
@@ -15,8 +15,6 @@ export class MainScene extends Phaser.Scene {
   }
 
   create(): void {
-    let button: Button = new Button(this);
-    button.setText("Click");
-    button.setCallback(() => console.log("Clicked"));
+    let button: NumberButton = new NumberButton(this, 1);
   }
 }
