@@ -61,6 +61,15 @@ export default class Button {
     this.text.setText(newText);
   }
 
+  setStyle(style: any) {
+    this.text.setStyle(style);
+  }
+
+  setInnerPosition(x: number = -1, y: number = -1) {
+    if (x > -1) this.text.setX(x);
+    if (y > -1) this.text.setY(y);
+  }
+
   setCallback(newCallback: () => void): void {
     this.onClickCallback = newCallback;
   }

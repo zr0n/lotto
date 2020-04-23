@@ -1,20 +1,18 @@
-import NumberButton from "../classes/NumberButton";
+import Card from "../classes/Card";
 
 export class MainScene extends Phaser.Scene {
-  private phaserSprite: Phaser.GameObjects.Sprite;
-  private test: Phaser.GameObjects.Text;
-
   constructor() {
     super({
       key: "MainScene",
     });
   }
 
-  preload(): void {
-    this.load.image("myImage", "src/boilerplate/assets/phaser.png");
-  }
+  preload(): void {}
 
   create(): void {
-    let button: NumberButton = new NumberButton(this, 9, 375, 275, 50, 50);
+    let card = new Card(this, 150, 200);
+    let card2 = new Card(this, 480, 200);
+    let card3 = new Card(this, 150, 315);
+    let card4 = new Card(this, 480, 315);
   }
 }
