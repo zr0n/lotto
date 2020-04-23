@@ -31,7 +31,7 @@ export default class Button {
     this.background.fillRect(this.x, this.y, this.width, this.height);
     this.background.strokeRect(this.x, this.y, this.width, this.height);
 
-    var style = {
+    const style = {
       font: "bold 32px Arial",
       fill: "#fff",
       boundsAlignH: "center",
