@@ -2,7 +2,7 @@ import NumberButton from "./NumberButton";
 import Button from "./Button";
 
 export default class Card {
-  public clean;
+  public clean = true;
 
   private scene: Phaser.Scene;
   private x: number;
