@@ -61,7 +61,7 @@ export default class Card {
     this.clearButton.setText("Clear");
     this.clearButton.setCallback(this.onClickClearButton.bind(this));
 
-    var style = {
+    const style = {
       font: "bold 14px Arial",
       fill: "#fff",
     };

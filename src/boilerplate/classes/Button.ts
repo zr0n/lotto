@@ -1,11 +1,12 @@
 export default class Button {
-  private scene: Phaser.Scene;
-  private width: number;
-  private height: number;
-  private x: number;
-  private y: number;
-  private background: Phaser.GameObjects.Graphics;
-  private text: Phaser.GameObjects.Text;
+  protected scene: Phaser.Scene;
+  protected width: number;
+  protected height: number;
+  protected x: number;
+  protected y: number;
+  protected background: Phaser.GameObjects.Graphics;
+  protected text: Phaser.GameObjects.Text;
+
   private onClickCallback: () => void;
 
   constructor(
